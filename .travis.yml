@@ -1,3 +1,16 @@
+sudo: required
 language: cpp
+addons:
+    apt:
+        packages:
+           - python3
+           - python-pip3
+           - ninja
+before_install:
+    - sudo pip3 install --upgrade pip
+    - sudo pip3 install meson
 script:
     - meson build
+    - cd build
+    - ninja
+    - ninja test
