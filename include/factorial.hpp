@@ -1,3 +1,3 @@
 #pragma once
 
-int factorial (int N);
+long factorial (long N);
